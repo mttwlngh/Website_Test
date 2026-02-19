@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doctor Box</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="brand">
+        <img class="brand-logo" src="assets/DoctorBox_Logo_New-green.svg" alt="Doctor Box Logo" />
+        <div>
+          <p class="eyebrow">DOCTOR BOX</p>
+          <h1>Anleitungen für Testkits</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <div class="card-header">
+          <h2>Anleitungen</h2>
+          <p>Wähle das passende Testkit und folge den Schritten.</p>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab-button active" data-tab="sti-pro" role="tab">STI Pro</button>
+          <button class="tab-button" data-tab="sti-standard" role="tab">STI Standard</button>
+          <button class="tab-button" data-tab="sti-basic" role="tab">STI Basic</button>
+          <button class="tab-button" data-tab="sti-essential" role="tab">STI Essential</button>
+          <button class="tab-button" data-tab="psa-test" role="tab">PSA Test</button>
+          <button class="tab-button" data-tab="darmkrebs" role="tab">Darmkrebsvorsorge</button>
+        </div>
+
+        <div class="tab-panels">
+          <section class="tab-panel active" data-tab="sti-pro" role="tabpanel">
+            <h3>STI Pro</h3>
+            <div class="divider"></div>
+
+            <div class="gender-toggle" role="tablist">
+              <button class="pill-button active" data-gender="male">💧 Urin &amp; 🩸 Trockenblut</button>
+              <button class="pill-button" data-gender="female">� Vaginalabstrich &amp; 🩸 Trockenblut</button>
+            </div>
+
+            <div class="gender-panels">
+              <div class="gender-panel active" data-gender="male">
+                <div class="info-box">
+                  <h4><span class="icon-badge">�</span> Komponenten für Urin &amp; Trockenblut</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (STP)</li>
+                    <li>1x Urinbecher</li>
+                    <li>1x Urin Set</li>
+                    <li>1x Grünes Anleitungsheft</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="gender-panel" data-gender="female">
+                <div class="info-box">
+                  <h4><span class="icon-badge">🧬</span> Komponenten für Vaginalabstrich &amp; Trockenblut</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (VPR)</li>
+                    <li>1x Vaginalabstrich</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Beiges Anleitungsheft</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="sti-standard" role="tabpanel">
+            <h3>STI Standard</h3>
+            <div class="divider"></div>
+
+            <div class="gender-toggle" role="tablist">
+              <button class="pill-button active" data-gender="male">💧 Urin &amp; 🩸 Trockenblut</button>
+              <button class="pill-button" data-gender="female">� Vaginalabstrich &amp; 🩸 Trockenblut</button>
+            </div>
+
+            <div class="gender-panels">
+              <div class="gender-panel active" data-gender="male">
+                <div class="info-box">
+                  <h4><span class="icon-badge">�</span> Komponenten für Urin &amp; Trockenblut</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (STS)</li>
+                    <li>1x Urinbecher</li>
+                    <li>1x Urin Set</li>
+                    <li>1x Grünes Anleitungsheft</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="gender-panel" data-gender="female">
+                <div class="info-box">
+                  <h4><span class="icon-badge">🧬</span> Komponenten für Vaginalabstrich &amp; Trockenblut</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (VST)</li>
+                    <li>1x Vaginalabstrich</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Beiges Anleitungsheft</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="sti-basic" role="tabpanel">
+            <h3>STI Basic</h3>
+            <div class="divider"></div>
+            <div class="sub-toggle" role="tablist">
+              <button class="pill-button active" data-subtab="urin">💧 Urin</button>
+              <button class="pill-button" data-subtab="vaginal">� Vaginal</button>
+              <button class="pill-button" data-subtab="rektal">� Rektal</button>
+            </div>
+
+            <div class="sub-panels">
+              <div class="sub-panel active" data-subtab="urin">
+                <div class="info-box">
+                  <h4><span class="icon-badge">💧</span> Urin</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (STB)</li>
+                    <li>1x Urinbecher</li>
+                    <li>1x Urin Set</li>
+                    <li>1x Grünes Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-panel" data-subtab="vaginal">
+                <div class="info-box">
+                  <h4><span class="icon-badge">�</span> Vaginal</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (VBA)</li>
+                    <li>1x Vaginalabstrich</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Beiges Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-panel" data-subtab="rektal">
+                <div class="info-box">
+                  <h4><span class="icon-badge">�</span> Rektal</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (RBA)</li>
+                    <li>1x Rektalabstrich</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Grünes Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="sti-essential" role="tabpanel">
+            <h3>STI Essential</h3>
+            <div class="divider"></div>
+            <div class="sub-toggle" role="tablist">
+              <button class="pill-button active" data-subtab="urin">💧 Urin</button>
+              <button class="pill-button" data-subtab="vaginal">� Vaginal</button>
+            </div>
+
+            <div class="sub-panels">
+              <div class="sub-panel active" data-subtab="urin">
+                <div class="info-box">
+                  <h4><span class="icon-badge">💧</span> Urin</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (STE)</li>
+                    <li>1x Urinbecher</li>
+                    <li>1x Urin Set</li>
+                    <li>1x Grünes Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-panel" data-subtab="vaginal">
+                <div class="info-box">
+                  <h4><span class="icon-badge">�</span> Vaginal</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Blauer Beutel</li>
+                    <li>1x Barcodekarte (VES)</li>
+                    <li>1x Vaginalabstrich</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Beiges Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="psa-test" role="tabpanel">
+            <h3>PSA Test</h3>
+            <div class="divider"></div>
+            <div class="info-box">
+              <h4><span class="icon-badge">🩸</span> Komponenten</h4>
+              <ul>
+                <li>1x Versandbeutel (Labor Krone)</li>
+                <li>1x Barcodekarte (PSA)</li>
+                <li>
+                  1x Blutentnahmeset
+                  <ul>
+                    <li>3x Lanzetten</li>
+                    <li>2x Pflaster</li>
+                    <li>2x Alkoholtupfer</li>
+                    <li>1x Wundkompresse</li>
+                  </ul>
+                </li>
+                <li>1x Anleitungsheft</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="darmkrebs" role="tabpanel">
+            <h3>Darmkrebsvorsorge</h3>
+            <div class="divider"></div>
+            <div class="sub-toggle" role="tablist">
+              <button class="pill-button active" data-subtab="gwq">� GWQ</button>
+              <button class="pill-button" data-subtab="kkh">📄 KKH</button>
+            </div>
+
+            <div class="sub-panels">
+              <div class="sub-panel active" data-subtab="gwq">
+                <div class="info-box">
+                  <h4><span class="icon-badge">🧾</span> Komponenten GWQ</h4>
+                  <ul>
+                    <li>1x Blauer Beutel mit Saugeinlage</li>
+                    <li>1x Versandbeutel (Labor Becker)</li>
+                    <li>1x Stuhlauffanghilfe</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Röhrchen</li>
+                    <li>1x Barcodekarte</li>
+                    <li>1x GWQ Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-panel" data-subtab="kkh">
+                <div class="info-box">
+                  <h4><span class="icon-badge">�</span> Komponenten KKH</h4>
+                  <ul>
+                    <li>1x Blauer Beutel mit Saugeinlage</li>
+                    <li>1x Versandbeutel (Labor Becker)</li>
+                    <li>1x Stuhlauffanghilfe</li>
+                    <li>1x Handschuh</li>
+                    <li>1x Röhrchen</li>
+                    <li>1x KKH Anleitungsheft</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
