@@ -7,274 +7,1124 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="page-header">
-      <div class="brand">
-        <img class="brand-logo" src="assets/DoctorBox_Logo_New-green.svg" alt="Doctor Box Logo" />
-        <div>
-          <p class="eyebrow">DOCTOR BOX</p>
-          <h1>Anleitungen für Testkits</h1>
-        </div>
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="/" class="nav-brand" aria-label="Doctor Box Startseite">
+          <img class="brand-logo" src="assets/DoctorBox_Logo_New-green.svg" alt="Doctor Box Logo" />
+          <span>Doctor Box</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Hauptnavigation">
+          <a href="#testauswahl" data-target="sti-pro" class="nav-box active" aria-current="page">Testkits</a>
+          <a href="#anleitungen" class="nav-box">Anleitung</a>
+          <a href="#support" class="nav-box">Support</a>
+        </nav>
+
+        <a class="nav-login" href="https://doctorbox.de/login">Login</a>
       </div>
     </header>
 
-    <main class="container">
-      <section class="card">
+    <header class="page-header" id="anleitungen">
+      <div class="hero container">
+        <p class="eyebrow">DOCTOR BOX</p>
+        <h1>Anleitungen für Testkits</h1>
+  <p class="hero-subtitle">Schritt-für-Schritt Anleitung zum korrekten Verpacken deines Testkits.</p>
+      </div>
+    </header>
+
+    <main class="page-main" id="instructions">
+      <div class="container">
+        <section class="card" id="instructions-card">
         <div class="card-header">
           <h2>Anleitungen</h2>
           <p>Wähle das passende Testkit und folge den Schritten.</p>
         </div>
 
-        <div class="tabs" role="tablist">
-          <button class="tab-button active" data-tab="sti-pro" role="tab">STI Pro</button>
-          <button class="tab-button" data-tab="sti-standard" role="tab">STI Standard</button>
-          <button class="tab-button" data-tab="sti-basic" role="tab">STI Basic</button>
-          <button class="tab-button" data-tab="sti-essential" role="tab">STI Essential</button>
-          <button class="tab-button" data-tab="psa-test" role="tab">PSA Test</button>
-          <button class="tab-button" data-tab="darmkrebs" role="tab">Darmkrebsvorsorge</button>
+        <div id="testauswahl" class="category-switcher" role="tablist">
+          <button class="category-btn active" data-category-target="sti" aria-selected="true">STI-Testkits</button>
+          <button class="category-btn" data-category-target="vorsorge" aria-selected="false">Vorsorgetests</button>
+        </div>
+
+        <div class="test-category active" data-category="sti">
+          <div class="tabs" role="tablist">
+            <button class="tab-button" data-category="sti" data-tab="sti-pro" role="tab" aria-pressed="false">STI Pro</button>
+            <button class="tab-button" data-category="sti" data-tab="sti-standard" role="tab" aria-pressed="false">STI Standard</button>
+            <button class="tab-button" data-category="sti" data-tab="sti-essential" role="tab" aria-pressed="false">STI Essential</button>
+            <button class="tab-button" data-category="sti" data-tab="sti-select" role="tab" aria-pressed="false">STI Select</button>
+            <button class="tab-button" data-category="sti" data-tab="sti-basic" role="tab" aria-pressed="false">STI Basic</button>
+            <button class="tab-button" data-category="sti" data-tab="hpv-test" role="tab" aria-pressed="false">HPV Test</button>
+          </div>
+        </div>
+
+        <div class="test-category" data-category="vorsorge">
+          <div class="tabs" role="tablist">
+            <button class="tab-button" data-category="vorsorge" data-tab="psa-test" role="tab" aria-pressed="false">PSA Vorsorge</button>
+            <button class="tab-button" data-category="vorsorge" data-tab="vitamin-d" role="tab" aria-pressed="false">Vitamin D</button>
+            <button class="tab-button" data-category="vorsorge" data-tab="hba1c" role="tab" aria-pressed="false">Blutzucker (HbA1c)</button>
+            <button class="tab-button" data-category="vorsorge" data-tab="darmkrebs" role="tab" aria-pressed="false">Darmkrebsvorsorge</button>
+          </div>
         </div>
 
         <div class="tab-panels">
-          <section class="tab-panel active" data-tab="sti-pro" role="tabpanel">
+          <div class="tab-placeholder active" aria-live="polite">
+            <div class="placeholder-icon">🧪</div>
+            <h3>Test auswählen</h3>
+            <p>Bitte wähle oben ein Testkit, um die Anleitung zu sehen.</p>
+          </div>
+
+          <section id="tab-sti-pro" class="tab-panel" data-category="sti" data-tab="sti-pro" role="tabpanel" aria-hidden="true">
             <h3>STI Pro</h3>
             <div class="divider"></div>
 
             <div class="gender-toggle" role="tablist">
               <button class="pill-button active" data-gender="male">💧 Urin &amp; 🩸 Trockenblut</button>
-              <button class="pill-button" data-gender="female">� Vaginalabstrich &amp; 🩸 Trockenblut</button>
+              <button class="pill-button" data-gender="female">🧪 Vaginalabstrich &amp; 🩸 Trockenblut</button>
             </div>
 
-            <div class="gender-panels">
-              <div class="gender-panel active" data-gender="male">
-                <div class="info-box">
-                  <h4><span class="icon-badge">�</span> Komponenten für Urin &amp; Trockenblut</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (STP)</li>
-                    <li>1x Urinbecher</li>
-                    <li>1x Urin Set</li>
-                    <li>1x Grünes Anleitungsheft</li>
-                    <li>
-                      1x Blutentnahmeset
-                      <ul>
-                        <li>3x Lanzetten</li>
-                        <li>2x Pflaster</li>
-                        <li>2x Alkoholtupfer</li>
-                        <li>1x Wundkompresse</li>
-                      </ul>
-                    </li>
-                  </ul>
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                    <p>So packst du das STI Pro Testkit Schritt für Schritt.</p>
+                  </div>
+
+                  <div class="gender-panels">
+                    <div class="gender-panel active" data-gender="male">
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauen Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;2</strong> vorbereiten und ins Blutentnahmeset legen.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                        <p class="step-hint">Hinweis: Danach das Blutentnahmeset verschließen und ins Testkit geben.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Urinbecher</strong> und das <strong>Urine Specimen Collection Kit</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Barcode&nbsp;3</strong> auf den <strong>braunen Versandumschlag</strong> kleben.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> als letztes obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Testkit</strong> in den gekennzeichneten <strong>braunen Versandbeutel</strong> legen.</p>
+                      </div>
+                    </div>
+
+                    <div class="gender-panel" data-gender="female">
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauen Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;2</strong> vorbereiten und ins Blutentnahmeset legen.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                        <p class="step-hint">Hinweis: Danach das Blutentnahmeset verschließen und ins Testkit geben.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Handschuh</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Vaginalabstrich</strong> mit <strong>Barcode&nbsp;3</strong> bekleben und ins Testkit legen.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcode&nbsp;4</strong> auf den <strong>braunen Versandumschlag</strong> kleben.</p>
+                        <span class="barcode-label">Barcode 4</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> als letztes obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 9</div>
+                        <p class="step-body"><strong>Testkit</strong> in den gekennzeichneten <strong>braunen Versandbeutel</strong> legen.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="gender-panel" data-gender="female">
-                <div class="info-box">
-                  <h4><span class="icon-badge">🧬</span> Komponenten für Vaginalabstrich &amp; Trockenblut</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (VPR)</li>
-                    <li>1x Vaginalabstrich</li>
-                    <li>1x Handschuh</li>
-                    <li>1x Beiges Anleitungsheft</li>
-                    <li>
-                      1x Blutentnahmeset
+              </section>
+
+              <section class="sti-pro-components">
+                <div class="gender-panels">
+                  <div class="gender-panel active" data-gender="male">
+                    <div class="info-box">
+                      <h4><span class="icon-badge">📦</span> Komponenten für Urin &amp; Trockenblut</h4>
                       <ul>
-                        <li>3x Lanzetten</li>
-                        <li>2x Pflaster</li>
-                        <li>2x Alkoholtupfer</li>
-                        <li>1x Wundkompresse</li>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel mit Saugeinlage</li>
+                        <li>1x Barcodekarte (STP)</li>
+                        <li>1x Urinbecher</li>
+                        <li>1x Urine Specimen Collection Kit</li>
+                        <li>1x Grünes Anleitungsheft</li>
+                        <li>
+                          1x Blutentnahmeset
+                          <ul>
+                            <li>1x Trockenblutkarte</li>
+                            <li>3x Lanzetten</li>
+                            <li>2x Pflaster</li>
+                            <li>2x Alkoholtupfer</li>
+                            <li>1x Wundkompresse</li>
+                          </ul>
+                        </li>
                       </ul>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
+
+                  <div class="gender-panel" data-gender="female">
+                    <div class="info-box">
+                      <h4><span class="icon-badge">📦</span> Komponenten für Vaginalabstrich &amp; Trockenblut</h4>
+                      <ul>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel mit Saugeinlage</li>
+                        <li>1x Barcodekarte (VPR)</li>
+                        <li>1x Vaginalabstrich</li>
+                        <li>1x Handschuh</li>
+                        <li>1x Beiges Anleitungsheft</li>
+                        <li>
+                          1x Blutentnahmeset
+                          <ul>
+                            <li>1x Trockenblutkarte</li>
+                            <li>3x Lanzetten</li>
+                            <li>2x Pflaster</li>
+                            <li>2x Alkoholtupfer</li>
+                            <li>1x Wundkompresse</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </section>
             </div>
           </section>
 
-          <section class="tab-panel" data-tab="sti-standard" role="tabpanel">
+          <section id="tab-sti-standard" class="tab-panel" data-category="sti" data-tab="sti-standard" role="tabpanel" aria-hidden="true">
             <h3>STI Standard</h3>
             <div class="divider"></div>
 
             <div class="gender-toggle" role="tablist">
               <button class="pill-button active" data-gender="male">💧 Urin &amp; 🩸 Trockenblut</button>
-              <button class="pill-button" data-gender="female">� Vaginalabstrich &amp; 🩸 Trockenblut</button>
+              <button class="pill-button" data-gender="female">🧪 Vaginalabstrich &amp; 🩸 Trockenblut</button>
             </div>
 
-            <div class="gender-panels">
-              <div class="gender-panel active" data-gender="male">
-                <div class="info-box">
-                  <h4><span class="icon-badge">�</span> Komponenten für Urin &amp; Trockenblut</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (STS)</li>
-                    <li>1x Urinbecher</li>
-                    <li>1x Urin Set</li>
-                    <li>1x Grünes Anleitungsheft</li>
-                    <li>
-                      1x Blutentnahmeset
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                  </div>
+
+                  <div class="gender-panels">
+                    <div class="gender-panel active" data-gender="male">
+                      <p class="gender-note">Schritte für den STI Standard (Urin &amp; Trockenblut) Kit.</p>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;2</strong> bekleben und ins Blutentnahmeset legen.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Urinbecher</strong> plus <strong>Urine Specimen Collection Kit</strong> einlegen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Barcode&nbsp;3</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                      </div>
+                    </div>
+
+                    <div class="gender-panel" data-gender="female">
+                      <p class="gender-note">Schritte für den STI Standard (Vaginalabstrich &amp; Trockenblut) Kit.</p>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;2</strong> bekleben und ins Blutentnahmeset legen.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Handschuh</strong> einlegen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Vaginalabstrich</strong> mit <strong>Barcode&nbsp;3</strong> bekleben.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcode&nbsp;4</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 4</span>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> einlegen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf legen.</p>
+                      </div>
+                      <div class="step-card">
+                        <div class="step-title">Schritt 9</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel geben.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sti-pro-components">
+                <div class="gender-panels">
+                  <div class="gender-panel active" data-gender="male">
+                    <div class="info-box">
+                      <h4><span class="icon-badge">📦</span> Komponenten für Urin &amp; Trockenblut</h4>
                       <ul>
-                        <li>3x Lanzetten</li>
-                        <li>2x Pflaster</li>
-                        <li>2x Alkoholtupfer</li>
-                        <li>1x Wundkompresse</li>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel mit Saugeinlage</li>
+                        <li>1x Barcodekarte (STS)</li>
+                        <li>1x Urinbecher</li>
+                        <li>1x Urine Specimen Collection Kit</li>
+                        <li>1x Grünes Anleitungsheft</li>
+                        <li>
+                          1x Blutentnahmeset
+                          <ul>
+                            <li>1x Trockenblutkarte</li>
+                            <li>3x Lanzetten</li>
+                            <li>2x Pflaster</li>
+                            <li>2x Alkoholtupfer</li>
+                            <li>1x Wundkompresse</li>
+                          </ul>
+                        </li>
                       </ul>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
+
+                  <div class="gender-panel" data-gender="female">
+                    <div class="info-box">
+                      <h4><span class="icon-badge">📦</span> Komponenten für Vaginalabstrich &amp; Trockenblut</h4>
+                      <ul>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel mit Saugeinlage</li>
+                        <li>1x Barcodekarte (VST)</li>
+                        <li>1x Vaginalabstrich</li>
+                        <li>1x Handschuh</li>
+                        <li>1x Beiges Anleitungsheft</li>
+                        <li>
+                          1x Blutentnahmeset
+                          <ul>
+                            <li>1x Trockenblutkarte</li>
+                            <li>3x Lanzetten</li>
+                            <li>2x Pflaster</li>
+                            <li>2x Alkoholtupfer</li>
+                            <li>1x Wundkompresse</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section id="tab-sti-basic" class="tab-panel" data-category="sti" data-tab="sti-basic" role="tabpanel" aria-hidden="true">
+            <h3>STI Basic</h3>
+            <div class="divider"></div>
+            <div class="sub-toggle" role="tablist">
+              <button class="pill-button active" data-subtab="urin">💧 Urin</button>
+              <button class="pill-button" data-subtab="vaginal">🧪 Vaginal</button>
+              <button class="pill-button" data-subtab="rektal">🌡️ Rektal</button>
+            </div>
+
+            <div class="sub-panels">
+              <div class="sub-panel active" data-subtab="urin">
+                <div class="sti-pro-two-col">
+                  <section class="sti-pro-steps">
+                    <div class="pack-steps">
+                      <div class="pack-steps-header">
+                        <h4>Pack-Anleitung</h4>
+                        <p>Schritte für den STI Basic (Urin) Kit.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Urinbecher</strong> plus <strong>Urine Specimen Collection Kit</strong> einlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="sti-pro-components">
+                    <div class="info-box">
+                        <h4><span class="icon-badge">📦</span> Komponenten für Urin</h4>
+                      <ul>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel</li>
+                        <li>1x Barcodekarte (STB)</li>
+                        <li>1x Urinbecher</li>
+                        <li>1x Urin Set</li>
+                        <li>1x Grünes Anleitungsheft</li>
+                      </ul>
+                    </div>
+                  </section>
                 </div>
               </div>
-              <div class="gender-panel" data-gender="female">
-                <div class="info-box">
-                  <h4><span class="icon-badge">🧬</span> Komponenten für Vaginalabstrich &amp; Trockenblut</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (VST)</li>
-                    <li>1x Vaginalabstrich</li>
-                    <li>1x Handschuh</li>
-                    <li>1x Beiges Anleitungsheft</li>
-                    <li>
-                      1x Blutentnahmeset
+
+              <div class="sub-panel" data-subtab="vaginal">
+                <div class="sti-pro-two-col">
+                  <section class="sti-pro-steps">
+                    <div class="pack-steps">
+                      <div class="pack-steps-header">
+                        <h4>Pack-Anleitung</h4>
+                        <p>Schritte für den STI Basic (Vaginal) Kit.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Handschuh</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den <strong>Vaginalabstrich</strong> kleben.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Barcode&nbsp;3</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="sti-pro-components">
+                    <div class="info-box">
+                      <h4><span class="icon-badge">📦</span> Komponenten für Vaginal</h4>
                       <ul>
-                        <li>3x Lanzetten</li>
-                        <li>2x Pflaster</li>
-                        <li>2x Alkoholtupfer</li>
-                        <li>1x Wundkompresse</li>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel</li>
+                        <li>1x Barcodekarte (VBA)</li>
+                        <li>1x Vaginalabstrich</li>
+                        <li>1x Handschuh</li>
+                        <li>1x Beiges Anleitungsheft</li>
                       </ul>
-                    </li>
-                  </ul>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <div class="sub-panel" data-subtab="rektal">
+                <div class="sti-pro-two-col">
+                  <section class="sti-pro-steps">
+                    <div class="pack-steps">
+                      <div class="pack-steps-header">
+                        <h4>Pack-Anleitung</h4>
+                        <p>Schritte für den STI Basic (Rektal) Kit.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Handschuh</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Barcode&nbsp;2</strong> auf das <strong>rote Rektalröhrchen</strong> kleben.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Rektalabstrichtupfer</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcode&nbsp;3</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 9</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="sti-pro-components">
+                    <div class="info-box">
+                              <h4><span class="icon-badge">📦</span> Komponenten für Rektal</h4>
+                      <ul>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel</li>
+                        <li>1x Barcodekarte (RBA)</li>
+                        <li>1x Rotes Rektalröhrchen</li>
+                        <li>1x Rektalabstrichtupfer</li>
+                        <li>1x Handschuh</li>
+                        <li>1x Grünes Anleitungsheft</li>
+                      </ul>
+                    </div>
+                  </section>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="tab-panel" data-tab="sti-basic" role="tabpanel">
-            <h3>STI Basic</h3>
+          <section id="tab-sti-essential" class="tab-panel" data-category="sti" data-tab="sti-essential" role="tabpanel" aria-hidden="true">
+            <h3>STI Essential</h3>
             <div class="divider"></div>
             <div class="sub-toggle" role="tablist">
               <button class="pill-button active" data-subtab="urin">💧 Urin</button>
-              <button class="pill-button" data-subtab="vaginal">� Vaginal</button>
-              <button class="pill-button" data-subtab="rektal">� Rektal</button>
+              <button class="pill-button" data-subtab="vaginal">🧪 Vaginal</button>
             </div>
 
             <div class="sub-panels">
               <div class="sub-panel active" data-subtab="urin">
+                <div class="sti-pro-two-col">
+                  <section class="sti-pro-steps">
+                    <div class="pack-steps">
+                      <div class="pack-steps-header">
+                        <h4>Pack-Anleitung</h4>
+                        <p>Schritte für den STI Essential (Urin) Kit.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Urinbecher</strong> plus <strong>Urine Specimen Collection Kit</strong> einlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="sti-pro-components">
+                    <div class="info-box">
+                                <h4><span class="icon-badge">📦</span> Komponenten für Urin</h4>
+                      <ul>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel</li>
+                        <li>1x Barcodekarte (STE)</li>
+                        <li>1x Urinbecher</li>
+                        <li>1x Urin Set</li>
+                        <li>1x Grünes Anleitungsheft</li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <div class="sub-panel" data-subtab="vaginal">
+                <div class="sti-pro-two-col">
+                  <section class="sti-pro-steps">
+                    <div class="pack-steps">
+                      <div class="pack-steps-header">
+                        <h4>Pack-Anleitung</h4>
+                        <p>Schritte für den STI Essential (Vaginal) Kit.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 1</div>
+                        <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 2</div>
+                        <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                        <span class="barcode-label">Barcode 1</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 3</div>
+                        <p class="step-body"><strong>Handschuh</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 4</div>
+                        <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den <strong>Vaginalabstrich</strong> kleben.</p>
+                        <span class="barcode-label">Barcode 2</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 5</div>
+                        <p class="step-body"><strong>Barcode&nbsp;3</strong> auf den Versandumschlag kleben.</p>
+                        <span class="barcode-label">Barcode 3</span>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 6</div>
+                        <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 7</div>
+                        <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                      </div>
+
+                      <div class="step-card">
+                        <div class="step-title">Schritt 8</div>
+                        <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="sti-pro-components">
+                    <div class="info-box">
+                      <h4><span class="icon-badge">📦</span> Komponenten für Vaginal</h4>
+                      <ul>
+                        <li>1x Versandbeutel (Labor Krone)</li>
+                        <li>1x Blauer Beutel</li>
+                        <li>1x Barcodekarte (VES)</li>
+                        <li>1x Vaginalabstrich</li>
+                        <li>1x Handschuh</li>
+                        <li>1x Beiges Anleitungsheft</li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="tab-sti-select" class="tab-panel" data-category="sti" data-tab="sti-select" role="tabpanel" aria-hidden="true">
+            <h3>STI Select</h3>
+            <div class="divider"></div>
+
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                    <p>Schritte für das STI Select Kit.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 1</div>
+                    <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 2</div>
+                    <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;1</strong> vorbereiten und ins Blutentnahmeset legen.</p>
+                    <span class="barcode-label">Barcode 1</span>
+                    <p class="step-hint">Hinweis: Danach das Blutentnahmeset verschließen und ins Testkit geben.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 3</div>
+                    <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                    <span class="barcode-label">Barcode 2</span>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 4</div>
+                    <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 5</div>
+                    <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 6</div>
+                    <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sti-pro-components">
                 <div class="info-box">
-                  <h4><span class="icon-badge">💧</span> Urin</h4>
+                  <h4><span class="icon-badge">📦</span> Komponenten für Trockenblut</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Barcodekarte (PSA)</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                        <li>1x Trockenblutkarte</li>
+                      </ul>
+                    </li>
+                    <li>1x Anleitungsheft</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section id="tab-hpv-test" class="tab-panel" data-category="sti" data-tab="hpv-test" role="tabpanel" aria-hidden="true">
+            <h3>HPV Test</h3>
+            <div class="divider"></div>
+
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                    <p>Schritte für den HPV Test Kit.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 1</div>
+                    <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 2</div>
+                    <p class="step-body"><strong>Blauer Beutel mit Saugeinlage</strong> ins Testkit legen und mit <strong>Barcode&nbsp;1</strong> kennzeichnen.</p>
+                    <span class="barcode-label">Barcode 1</span>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 3</div>
+                    <p class="step-body"><strong>Urinbecher</strong> plus <strong>Urine Specimen Collection Kit</strong> einlegen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 4</div>
+                    <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                    <span class="barcode-label">Barcode 2</span>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 5</div>
+                    <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 6</div>
+                    <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 7</div>
+                    <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sti-pro-components">
+                <div class="info-box">
+                  <h4><span class="icon-badge">📦</span> Komponenten</h4>
                   <ul>
                     <li>1x Versandbeutel (Labor Krone)</li>
                     <li>1x Blauer Beutel</li>
                     <li>1x Barcodekarte (STB)</li>
                     <li>1x Urinbecher</li>
                     <li>1x Urin Set</li>
-                    <li>1x Grünes Anleitungsheft</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="sub-panel" data-subtab="vaginal">
-                <div class="info-box">
-                  <h4><span class="icon-badge">�</span> Vaginal</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (VBA)</li>
-                    <li>1x Vaginalabstrich</li>
-                    <li>1x Handschuh</li>
                     <li>1x Beiges Anleitungsheft</li>
                   </ul>
                 </div>
-              </div>
-
-              <div class="sub-panel" data-subtab="rektal">
-                <div class="info-box">
-                  <h4><span class="icon-badge">�</span> Rektal</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (RBA)</li>
-                    <li>1x Rektalabstrich</li>
-                    <li>1x Handschuh</li>
-                    <li>1x Grünes Anleitungsheft</li>
-                  </ul>
-                </div>
-              </div>
+              </section>
             </div>
           </section>
 
-          <section class="tab-panel" data-tab="sti-essential" role="tabpanel">
-            <h3>STI Essential</h3>
+          <section id="tab-psa-test" class="tab-panel" data-category="vorsorge" data-tab="psa-test" role="tabpanel" aria-hidden="true">
+            <h3>PSA Vorsorge</h3>
             <div class="divider"></div>
-            <div class="sub-toggle" role="tablist">
-              <button class="pill-button active" data-subtab="urin">💧 Urin</button>
-              <button class="pill-button" data-subtab="vaginal">� Vaginal</button>
-            </div>
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                    <p>Schritte für das PSA Vorsorge Kit.</p>
+                  </div>
 
-            <div class="sub-panels">
-              <div class="sub-panel active" data-subtab="urin">
+                  <div class="step-card">
+                    <div class="step-title">Schritt 1</div>
+                    <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 2</div>
+                    <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;1</strong> vorbereiten und ins <strong>Blutentnahmeset</strong> legen.</p>
+                    <span class="barcode-label">Barcode 1</span>
+                    <p class="step-hint">Hinweis: Danach das Blutentnahmeset verschließen und ins Testkit geben.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 3</div>
+                    <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                    <span class="barcode-label">Barcode 2</span>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 4</div>
+                    <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 5</div>
+                    <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 6</div>
+                    <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sti-pro-components">
                 <div class="info-box">
-                  <h4><span class="icon-badge">💧</span> Urin</h4>
+                  <h4><span class="icon-badge">📦</span> Komponenten für Trockenblut</h4>
                   <ul>
                     <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (STE)</li>
-                    <li>1x Urinbecher</li>
-                    <li>1x Urin Set</li>
-                    <li>1x Grünes Anleitungsheft</li>
+                    <li>1x Barcodekarte (PSA)</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                        <li>1x Trockenblutkarte</li>
+                      </ul>
+                    </li>
+                    <li>1x Anleitungsheft</li>
                   </ul>
                 </div>
-              </div>
-
-              <div class="sub-panel" data-subtab="vaginal">
-                <div class="info-box">
-                  <h4><span class="icon-badge">�</span> Vaginal</h4>
-                  <ul>
-                    <li>1x Versandbeutel (Labor Krone)</li>
-                    <li>1x Blauer Beutel</li>
-                    <li>1x Barcodekarte (VES)</li>
-                    <li>1x Vaginalabstrich</li>
-                    <li>1x Handschuh</li>
-                    <li>1x Beiges Anleitungsheft</li>
-                  </ul>
-                </div>
-              </div>
+              </section>
             </div>
           </section>
 
-          <section class="tab-panel" data-tab="psa-test" role="tabpanel">
-            <h3>PSA Test</h3>
+          <section id="tab-vitamin-d" class="tab-panel" data-category="vorsorge" data-tab="vitamin-d" role="tabpanel" aria-hidden="true">
+            <h3>Vitamin D</h3>
             <div class="divider"></div>
-            <div class="info-box">
-              <h4><span class="icon-badge">🩸</span> Komponenten</h4>
-              <ul>
-                <li>1x Versandbeutel (Labor Krone)</li>
-                <li>1x Barcodekarte (PSA)</li>
-                <li>
-                  1x Blutentnahmeset
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                    <p>Schritte für das Vitamin D Kit.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 1</div>
+                    <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 2</div>
+                    <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;1</strong> vorbereiten und ins <strong>Blutentnahmeset</strong> legen.</p>
+                    <span class="barcode-label">Barcode 1</span>
+                    <p class="step-hint">Hinweis: Danach das Blutentnahmeset verschließen und ins Testkit geben.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 3</div>
+                    <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                    <span class="barcode-label">Barcode 2</span>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 4</div>
+                    <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 5</div>
+                    <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 6</div>
+                    <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sti-pro-components">
+                <div class="info-box">
+                  <h4><span class="icon-badge">📦</span> Komponenten für Trockenblut</h4>
                   <ul>
-                    <li>3x Lanzetten</li>
-                    <li>2x Pflaster</li>
-                    <li>2x Alkoholtupfer</li>
-                    <li>1x Wundkompresse</li>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Barcodekarte (VTD)</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                        <li>1x Trockenblutkarte</li>
+                      </ul>
+                    </li>
+                    <li>1x Anleitungsheft</li>
                   </ul>
-                </li>
-                <li>1x Anleitungsheft</li>
-              </ul>
+                </div>
+              </section>
             </div>
           </section>
 
-          <section class="tab-panel" data-tab="darmkrebs" role="tabpanel">
+          <section id="tab-hba1c" class="tab-panel" data-category="vorsorge" data-tab="hba1c" role="tabpanel" aria-hidden="true">
+            <h3>Blutzucker-Test (HbA1c)</h3>
+            <div class="divider"></div>
+            <div class="sti-pro-two-col">
+              <section class="sti-pro-steps">
+                <div class="pack-steps">
+                  <div class="pack-steps-header">
+                    <h4>Pack-Anleitung</h4>
+                    <p>Schritte für das Blutzucker Kit.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 1</div>
+                    <p class="step-body"><strong>Versandbeutel</strong> bereitlegen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 2</div>
+                    <p class="step-body"><strong>Trockenblutkarte</strong> mit <strong>Barcode&nbsp;1</strong> vorbereiten und ins <strong>Blutentnahmeset</strong> legen.</p>
+                    <span class="barcode-label">Barcode 1</span>
+                    <p class="step-hint">Hinweis: Danach das Blutentnahmeset verschließen und ins Testkit geben.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 3</div>
+                    <p class="step-body"><strong>Barcode&nbsp;2</strong> auf den Versandumschlag kleben.</p>
+                    <span class="barcode-label">Barcode 2</span>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 4</div>
+                    <p class="step-body"><strong>Barcodekarte</strong> ins Testkit legen.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 5</div>
+                    <p class="step-body"><strong>Anleitungsheft</strong> obenauf platzieren.</p>
+                  </div>
+
+                  <div class="step-card">
+                    <div class="step-title">Schritt 6</div>
+                    <p class="step-body"><strong>Testkit</strong> in den Versandbeutel legen.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sti-pro-components">
+                <div class="info-box">
+                  <h4><span class="icon-badge">📦</span> Komponenten für Trockenblut</h4>
+                  <ul>
+                    <li>1x Versandbeutel (Labor Krone)</li>
+                    <li>1x Barcodekarte (HBC)</li>
+                    <li>
+                      1x Blutentnahmeset
+                      <ul>
+                        <li>3x Lanzetten</li>
+                        <li>2x Pflaster</li>
+                        <li>2x Alkoholtupfer</li>
+                        <li>1x Wundkompresse</li>
+                        <li>1x Trockenblutkarte</li>
+                      </ul>
+                    </li>
+                    <li>1x Anleitungsheft</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section id="tab-darmkrebs" class="tab-panel" data-category="vorsorge" data-tab="darmkrebs" role="tabpanel" aria-hidden="true">
             <h3>Darmkrebsvorsorge</h3>
             <div class="divider"></div>
             <div class="sub-toggle" role="tablist">
-              <button class="pill-button active" data-subtab="gwq">� GWQ</button>
-              <button class="pill-button" data-subtab="kkh">📄 KKH</button>
+              <button class="pill-button active" data-subtab="gwq">GWQ</button>
+              <button class="pill-button" data-subtab="kkh">KKH</button>
             </div>
 
             <div class="sub-panels">
               <div class="sub-panel active" data-subtab="gwq">
                 <div class="info-box">
-                  <h4><span class="icon-badge">🧾</span> Komponenten GWQ</h4>
+                  <h4><span class="icon-badge">📦</span> Komponenten (GWQ)</h4>
                   <ul>
                     <li>1x Blauer Beutel mit Saugeinlage</li>
                     <li>1x Versandbeutel (Labor Becker)</li>
@@ -289,7 +1139,7 @@
 
               <div class="sub-panel" data-subtab="kkh">
                 <div class="info-box">
-                  <h4><span class="icon-badge">�</span> Komponenten KKH</h4>
+                  <h4><span class="icon-badge">📦</span> Komponenten (KKH)</h4>
                   <ul>
                     <li>1x Blauer Beutel mit Saugeinlage</li>
                     <li>1x Versandbeutel (Labor Becker)</li>
@@ -304,8 +1154,25 @@
           </section>
         </div>
       </section>
-    </main>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
+  <section id="support" class="support-section">
+    <div class="container">
+      <div class="support-card">
+        <div>
+          <p class="eyebrow">Support</p>
+
+          <h3>Brauchst du Hilfe bei deinem Testkit?</h3>
+          <p class="muted">Matthieu ist für dich da. Wir melden uns werktags innerhalb von 24 Stunden.</p>
+        </div>
+        <div class="support-actions">
+          <a href="mailto:matthieu.weinlein@doctorbox.eu" class="btn-primary">E-Mail schreiben</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
   </body>
 </html>
