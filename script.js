@@ -1,3 +1,97 @@
+// ---------------------------------------------------------------------------
+// Authentication helpers (placeholder logic until backend integration)
+const AUTH_KEY = "db_auth";
+const AUTH_EMAIL_KEY = "db_email";
+const VALID_EMAIL = "matthieu.weinlein@doctorbox.eu";
+const VALID_PASSWORD = "1234";
+
+const getCurrentPage = () => document.body?.dataset?.page || "";
+
+const isAuthenticated = () => localStorage.getItem(AUTH_KEY) === "true";
+
+const login = (email, password) => {
+  const normalizedEmail = email.trim().toLowerCase();
+  const isValid =
+    normalizedEmail === VALID_EMAIL && password === VALID_PASSWORD;
+
+  if (isValid) {
+    localStorage.setItem(AUTH_KEY, "true");
+    localStorage.setItem(AUTH_EMAIL_KEY, normalizedEmail);
+    return { success: true };
+  }
+
+  return {
+    success: false,
+    message: "E-Mail oder Passwort ist ungültig.",
+  };
+};
+
+const logout = () => {
+  localStorage.removeItem(AUTH_KEY);
+  localStorage.removeItem(AUTH_EMAIL_KEY);
+  window.location.href = "login.html";
+};
+
+const enforceAuthGuards = () => {
+  const page = getCurrentPage();
+  if (page === "instructions" && !isAuthenticated()) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  if (page === "login" && isAuthenticated()) {
+    window.location.href = "index.html";
+  }
+};
+
+enforceAuthGuards();
+
+const applyNavAuthCta = () => {
+  const authLink = document.querySelector("[data-auth-link], .nav-login");
+  if (!authLink) return;
+
+  if (isAuthenticated()) {
+    authLink.textContent = "Logout";
+    authLink.setAttribute("href", "#logout");
+    authLink.setAttribute("role", "button");
+    authLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      logout();
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.removeAttribute("role");
+    authLink.setAttribute("href", "login.html");
+  }
+};
+
+applyNavAuthCta();
+
+const loginForm = document.querySelector("#login-form");
+if (loginForm) {
+  const loginError = document.querySelector("#login-error");
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(loginForm);
+    const email = formData.get("email")?.toString() ?? "";
+    const password = formData.get("password")?.toString() ?? "";
+
+    const result = login(email, password);
+    if (result.success) {
+      if (loginError) {
+        loginError.textContent = "";
+        loginError.hidden = true;
+      }
+      window.location.href = "index.html";
+    } else if (loginError) {
+      loginError.textContent = result.message;
+      loginError.hidden = false;
+    }
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Tab interactions
 const tabButtons = document.querySelectorAll(".tab-button");
 const tabPanels = document.querySelectorAll(".tab-panel");
 const categoryButtons = document.querySelectorAll(".category-btn");

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Doctor Box Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="login-page" data-page="login">
+    <header class="site-header auth-topbar">
+      <div class="nav-container">
+        <a href="/" class="nav-brand" aria-label="Doctor Box Startseite">
+          <img class="brand-logo" src="assets/DoctorBox_Logo_New-green.svg" alt="Doctor Box Logo" />
+          <span>Doctor Box</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <section class="card auth-card" aria-labelledby="login-title">
+        <div class="auth-header">
+          <p class="eyebrow">Sicherer Zugang</p>
+          <h1 id="login-title">Einloggen</h1>
+          <p class="muted">Bitte melde dich mit deinem Doctor Box Zugang an.</p>
+        </div>
+
+        <form id="login-form" class="auth-form" novalidate>
+          <div class="form-field">
+            <label for="login-email">E-Mail-Adresse</label>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              class="auth-input"
+              placeholder="name@doctorbox.eu"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="login-password">Passwort</label>
+            <input
+              id="login-password"
+              name="password"
+              type="password"
+              class="auth-input"
+              placeholder="••••"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <p class="auth-error" id="login-error" role="alert" aria-live="polite" hidden></p>
+
+          <button type="submit" class="btn-primary auth-submit">Einloggen</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
