@@ -174,11 +174,11 @@ a {
 }
 
 .card {
-  background: var(--card);
-  border-radius: 28px;
+  background: transparent;
+  border-radius: 0;
   padding: 40px;
-  box-shadow: 0 30px 80px rgba(14, 23, 18, 0.08);
-  border: 1px solid rgba(15, 93, 58, 0.08);
+  box-shadow: none;
+  border: none;
 }
 
 .card-header h2 {
@@ -453,12 +453,12 @@ a {
 }
 
 .info-box {
-  background: #fff;
-  border-radius: 20px;
-  border: 1px solid rgba(15, 93, 58, 0.08);
+  background: transparent;
+  border-radius: 0;
+  border: none;
   padding: 24px;
-  box-shadow: 0 20px 50px rgba(11, 17, 13, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: none;
+  transition: none;
 }
 
 .info-box h4 {
@@ -486,12 +486,13 @@ a {
 }
 
 .info-box ul > li {
-  background: var(--bg-alt);
-  border-radius: 16px;
-  padding: 14px 18px 14px 42px;
+  background: transparent;
+  border-radius: 0;
+  padding: 10px 12px 10px 42px;
   position: relative;
   font-weight: 500;
   color: var(--text);
+  border-bottom: 1px solid rgba(15, 93, 58, 0.04);
 }
 
 .info-box ul > li::before {
@@ -499,11 +500,11 @@ a {
   position: absolute;
   left: 18px;
   top: 18px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--green-dark);
-  box-shadow: 0 0 0 4px rgba(15, 93, 58, 0.12);
+  box-shadow: none;
 }
 
 .info-box ul > li > ul {
@@ -533,18 +534,18 @@ a {
 }
 
 .sti-pro-components .info-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 28px 70px rgba(11, 17, 13, 0.08);
+  transform: none;
+  box-shadow: none;
 }
 
 .image-placeholder {
   margin-top: 28px;
   padding: 24px;
   border: 1px dashed rgba(15, 93, 58, 0.2);
-  border-radius: 16px;
+  border-radius: 0;
   text-align: center;
   color: var(--muted);
-  background: rgba(255, 255, 255, 0.7);
+  background: transparent;
 }
 
 .barcode-tag {
@@ -565,11 +566,11 @@ a {
 }
 
 .support-card {
-  border-radius: 24px;
+  border-radius: 0;
   padding: 32px;
-  background: linear-gradient(135deg, #fdf7ee, #edf7f1);
-  border: 1px solid rgba(15, 93, 58, 0.12);
-  box-shadow: 0 40px 80px rgba(9, 16, 13, 0.08);
+  background: transparent;
+  border: none;
+  box-shadow: none;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
