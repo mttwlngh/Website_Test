@@ -379,9 +379,26 @@ a {
 .sti-pro-two-col {
   margin-top: 28px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* left: steps (fluid), right: components (fixed-ish) */
+  grid-template-columns: 1fr 360px;
   gap: 32px;
   align-items: start;
+}
+
+/* ensure steps are left and components are right regardless of source order */
+.sti-pro-two-col .sti-pro-steps {
+  order: 1;
+}
+.sti-pro-two-col .sti-pro-components {
+  order: 2;
+}
+
+/* make components column slightly sticky on desktop so it's easy to reference */
+@media (min-width: 1000px) {
+  .sti-pro-two-col .sti-pro-components .info-box {
+    position: sticky;
+    top: 120px;
+  }
 }
 
 .pack-steps {
