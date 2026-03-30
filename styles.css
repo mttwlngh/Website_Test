@@ -379,13 +379,15 @@ a {
 .sti-pro-two-col {
   margin-top: 28px;
   display: grid;
-  /* left: steps (fluid), right: components (fixed-ish) */
-  grid-template-columns: 1fr 360px;
+  /* left: steps and right: components — equal width */
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
 }
 
 /* ensure steps are left and components are right regardless of source order */
+
+/* keep semantic order but allow explicit layout if markup order differs */
 .sti-pro-two-col .sti-pro-steps {
   order: 1;
 }
@@ -636,6 +638,25 @@ a {
   letter-spacing: 0.14em;
   font-weight: 700;
   color: var(--green-dark);
+}
+
+.lang-toggle {
+  margin-left: auto;
+  border: 1px solid rgba(15, 93, 58, 0.4);
+  background: transparent;
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-toggle:hover {
+  background: var(--green-dark);
+  color: #fff;
 }
 
 .muted {

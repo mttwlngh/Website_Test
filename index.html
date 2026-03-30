@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +15,7 @@
           <span>Doctor Box</span>
         </a>
         <!-- Components list removed from header (was inserted accidentally). It belongs in the page content, not the nav. -->
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
         <a class="nav-login" href="login.html" data-auth-link>Login</a>
       </div>
     </header>
@@ -26,13 +27,13 @@
         <section class="card" id="instructions-card">
         <div class="card-header">
           <p class="eyebrow">DOCTOR BOX</p>
-          <h1>Anleitungen für Testkits</h1>
-          <p>Wähle das passende Testkit und folge den Schritten.</p>
+          <h1 data-i18n="page.title">Anleitungen für Testkits</h1>
+          <p data-i18n="page.subtitle">Wähle das passende Testkit und folge den Schritten.</p>
         </div>
 
         <div id="testauswahl" class="category-switcher" role="tablist">
-          <button class="category-btn active" data-category-target="sti" aria-selected="true">STI-Testkits</button>
-          <button class="category-btn" data-category-target="vorsorge" aria-selected="false">Vorsorgetests</button>
+          <button class="category-btn active" data-category-target="sti" aria-selected="true" data-i18n="cat.sti">STI-Testkits</button>
+          <button class="category-btn" data-category-target="vorsorge" aria-selected="false" data-i18n="cat.vorsorge">Vorsorgetests</button>
         </div>
 
         <div class="test-category active" data-category="sti">
@@ -58,8 +59,8 @@
         <div class="tab-panels">
           <div class="tab-placeholder active" aria-live="polite">
             <div class="placeholder-icon">🧪</div>
-            <h3>Test auswählen</h3>
-            <p>Bitte wähle oben ein Testkit, um die Anleitung zu sehen.</p>
+            <h3 data-i18n="placeholder.title">Test auswählen</h3>
+            <p data-i18n="placeholder.body">Bitte wähle oben ein Testkit, um die Anleitung zu sehen.</p>
           </div>
 
           <section id="tab-sti-pro" class="tab-panel" data-category="sti" data-tab="sti-pro" role="tabpanel" aria-hidden="true">
@@ -1229,12 +1230,11 @@
       <div class="support-card">
         <div>
           <p class="eyebrow">Support</p>
-
-          <h3>Brauchst du Hilfe bei deinem Testkit?</h3>
-          <p class="muted">Matthieu ist für dich da. Wir melden uns werktags innerhalb von 24 Stunden.</p>
+          <h3 data-i18n="support.title">Brauchst du Hilfe bei deinem Testkit?</h3>
+          <p class="muted" data-i18n="support.body">Matthieu ist für dich da. Wir melden uns werktags innerhalb von 24 Stunden.</p>
         </div>
         <div class="support-actions">
-          <a href="mailto:matthieu.weinlein@doctorbox.eu" class="btn-primary">E-Mail schreiben</a>
+          <a href="mailto:matthieu.weinlein@doctorbox.eu" class="btn-primary" data-i18n="support.cta">E-Mail schreiben</a>
         </div>
       </div>
     </div>
